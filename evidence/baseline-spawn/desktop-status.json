@@ -1,0 +1,11 @@
+{
+  "input_locked": true,
+  "dataset_dimensions": {
+    "Loadcase": 50,
+    "Node": 126,
+    "Component": 30,
+    "Element": 225,
+    "Nodes": 2,
+    "Axis": 3
+  }
+}

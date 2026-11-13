@@ -1,0 +1,4 @@
+id,configuration,expected,actual,result
+F01,30 m span / 7.5 m carriageway / zero skew / optimized with default sections,Desktop Design finishes with current results,Native worker pool could not start because the host denied a Unix-domain socket,Inconclusive
+F02,Same fixture as F01,Analysis model uses the overall width derived from the input dictionary,Input dictionary reports 8.4 m and analysis model reports 8.5 m,Fail
+F03,Same fixture as F01 with spawn worker start method,Desktop Design finishes and exposes the results dataset,Completed with no reported error and 50 load cases,Pass
