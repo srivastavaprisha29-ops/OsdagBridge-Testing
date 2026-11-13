@@ -1,0 +1,10 @@
+id,field,entered_m,median,expected_m,expected_warning,actual_widget_m,actual_dict_m,warning,osi_accepted,result
+F04,geometry.span,20,No,20,False,20,20,,True,Pass
+F05,geometry.span,45,No,45,False,45,45,,True,Pass
+F06,geometry.span,19.99,No,20,True,20.0,20.0,Span must be between 20.0 m and 45.0 m (software limitation).,False,Pass
+F07,geometry.span,45.01,No,45,True,45.0,45.0,Span must be between 20.0 m and 45.0 m (software limitation).,False,Pass
+F08,geometry.span,0,No,20,True,20.0,20.0,Span must be between 20.0 m and 45.0 m (software limitation).,False,Pass
+F09,geometry.span,-1,No,20,True,20.0,20.0,Span must be between 20.0 m and 45.0 m (software limitation).,False,Pass
+F10,geometry.carriageway_width,4.25,No,4.25,False,4.25,4.25,,True,Pass
+F11,geometry.carriageway_width,23.61,No,23.6,True,23.6,23.6,Carriageway width exceeds 23.6 m (software limitation).,False,Pass
+F12,geometry.carriageway_width,4.25,Yes,7.5,True,7.5,7.5,Minimum carriageway width required is 7.50 m as per IRC 5:2015 Clause 104.3.1.,False,Pass

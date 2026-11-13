@@ -1,0 +1,101 @@
+[hwloc/linux] failed to find sysfs cpu topology directory, aborting linux discovery.
+####### 3D rendering pipe initialisation #####
+Display3d class initialization starting ...
+Aspect_DisplayConnection created.
+OpenGl_GraphicDriver created.
+V3d_Viewer created.
+AIS_InteractiveContext created.
+V3d_View created
+Graphic3d_Camera created
+Graphic3d_StructureManager created
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 8.4 m
+  no_of_girders = 4
+  girder_spacing = 2.1 m
+  deck_overhang = 1.05 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 8.4 m
+  no_of_girders = 4
+  girder_spacing = 2.1 m
+  deck_overhang = 1.05 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 8.4 m
+  no_of_girders = 4
+  girder_spacing = 2.1 m
+  deck_overhang = 1.05 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 8.4 m
+  no_of_girders = 4
+  girder_spacing = 2.1 m
+  deck_overhang = 1.05 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 8.4 m
+  no_of_girders = 4
+  girder_spacing = 2.1 m
+  deck_overhang = 1.05 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 8.4 m
+  no_of_girders = 4
+  girder_spacing = 2.1 m
+  deck_overhang = 1.05 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 8.4 m
+  no_of_girders = 4
+  girder_spacing = 2.1 m
+  deck_overhang = 1.05 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 8.4 m
+  no_of_girders = 4
+  girder_spacing = 2.1 m
+  deck_overhang = 1.05 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 8.4 m
+  no_of_girders = 4
+  girder_spacing = 2.1 m
+  deck_overhang = 1.05 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 8.4 m
+  no_of_girders = 4
+  girder_spacing = 2.1 m
+  deck_overhang = 1.05 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 8.4 m
+  no_of_girders = 4
+  girder_spacing = 2.1 m
+  deck_overhang = 1.05 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 8.4 m
+  no_of_girders = 4
+  girder_spacing = 2.1 m
+  deck_overhang = 1.05 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 8.4 m
+  no_of_girders = 4
+  girder_spacing = 2.1 m
+  deck_overhang = 1.05 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 5.15 m
+  no_of_girders = 3
+  girder_spacing = 1.7167 m
+  deck_overhang = 0.8583 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 8.4 m
+  no_of_girders = 4
+  girder_spacing = 2.1 m
+  deck_overhang = 1.05 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 24.5 m
+  no_of_girders = 10
+  girder_spacing = 2.45 m
+  deck_overhang = 1.225 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 17.099999999999998 m
+  no_of_girders = 7
+  girder_spacing = 2.4429 m
+  deck_overhang = 1.2214 m
+[DEBUG] Bridge Layout Sizing Result:
+  overall_width = 17.099999999999998 m
+  no_of_girders = 7
+  girder_spacing = 2.4429 m
+  deck_overhang = 1.2214 m
+Process 0 Terminating
