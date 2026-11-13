@@ -4,3 +4,7 @@ F02,Same fixture as F01,Analysis model uses the overall width derived from the i
 F03,Same fixture as F01 with spawn worker start method,Desktop Design finishes and exposes the results dataset,Completed with no reported error and 50 load cases,Pass
 F13,20 m span / 7.5 m carriageway / spawn workers,"Desktop design completes and span agrees across input, output, grillage and CAD",See evidence/span-limits/results.json for the 20 m run,Pass
 F14,45 m span / 7.5 m carriageway / spawn workers,"Desktop design completes and span agrees across input, output, grillage and CAD",See evidence/span-limits/results.json for the 45 m run,Pass
+F15,30 m span / 10 m carriageway,Wider section produces five girders and propagates through analysis and CAD,Five girders in dictionaries and CAD with seven grid lines including two edges,Pass
+F16,300 mm deck via Additional Inputs,Deck thickness reaches output CAD and permanent load,300 mm in dictionaries and CAD with 7500 N/m² slab load,Pass
+F17,Alternate support conditions via desktop,Exercise a selectable alternate support,Support widgets absent and Pinned/Roller defaults recorded,Inconclusive
+F18,Self-weight factor 1.25 via Additional Inputs,Girder self-weight load is multiplied by 1.25,Factor persisted but same-area girder load remained 3024.70 N/m,Fail

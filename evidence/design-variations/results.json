@@ -1,0 +1,69 @@
+{
+  "additional-inputs": {
+    "supports": {
+      "support_conditions.left_support": {
+        "selected": "Pinned",
+        "widget_available": false
+      },
+      "support_conditions.right_support": {
+        "selected": "Roller",
+        "widget_available": false
+      }
+    },
+    "messages": [
+      {
+        "title": "Saved",
+        "text": "Inputs saved successfully."
+      }
+    ],
+    "deck_mm": 300,
+    "self_weight_factor": 1.25
+  },
+  "input-normalized": {
+    "geometry.carriageway_width": 10.0,
+    "typical_section.no_of_girders": 5,
+    "typical_section.girder_spacing": 2.18,
+    "typical_section.deck_thickness": 300,
+    "loading.permanent_load.dead_load.self_weight_factor": 1.25,
+    "support_conditions.left_support": "Pinned",
+    "support_conditions.right_support": "Roller"
+  },
+  "output": {
+    "geometry.carriageway_width": 10.0,
+    "typical_section.no_of_girders": 5,
+    "typical_section.girder_spacing": 2.18,
+    "typical_section.deck_thickness": 300,
+    "loading.permanent_load.dead_load.self_weight_factor": 1.25,
+    "support_conditions.left_support": "Pinned",
+    "support_conditions.right_support": "Roller"
+  },
+  "desktop-status": {
+    "cad_girders": 5,
+    "cad_deck_mm": 300.0,
+    "analysis_grid_lines": 7,
+    "analysis_span_m": 30.0,
+    "cad_span_mm": 30000.0,
+    "input_locked": true,
+    "dataset_dimensions": {
+      "Loadcase": 50,
+      "Node": 147,
+      "Component": 30,
+      "Element": 266,
+      "Nodes": 2,
+      "Axis": 3
+    }
+  },
+  "design-status": {
+    "error": null,
+    "traceback": "",
+    "cancelled": false
+  },
+  "analysis_load_log": [
+    "Self weight line load @ z=1.090 m: 3312.70 N/m (A=0.04220 m\u00b2)",
+    "Self weight line load @ z=3.295 m: 3024.70 N/m (A=0.03853 m\u00b2)",
+    "Self weight line load @ z=5.500 m: 3024.70 N/m (A=0.03853 m\u00b2)",
+    "Self weight line load @ z=7.705 m: 3024.70 N/m (A=0.03853 m\u00b2)",
+    "Self weight line load @ z=9.910 m: 3024.70 N/m (A=0.03853 m\u00b2)",
+    "Deck slab load magnitude: 7500.00 N/m\u00b2"
+  ]
+}

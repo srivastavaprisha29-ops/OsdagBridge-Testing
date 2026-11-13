@@ -7,3 +7,5 @@
 - WP3 geometry and OSI boundary checks passed in all nine cases. See the [boundary register](test_cases/boundary_tests.csv).
 
 - Full desktop designs completed at both advertised span limits. See the [span results](evidence/span-limits/results.json).
+
+- WP3 girder, deck, support and load checks are recorded in the [variation results](evidence/design-variations/results.json).
