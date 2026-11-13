@@ -22,6 +22,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("evidence", type=Path)
     parser.add_argument("--spawn", action="store_true", help="Use the application's alternate worker start method")
+    parser.add_argument("--span", type=float, default=30.0, help="Span in metres")
     args = parser.parse_args()
     evidence = args.evidence
     if args.spawn:
@@ -29,7 +30,7 @@ def main():
 
         def spawn_pool(max_workers):
             return ProcessPoolExecutor(
-                max_workers=max_workers, mp_context=multiprocessing.get_context("spawn")
+                max_workers=min(max_workers, 4), mp_context=multiprocessing.get_context("spawn")
             )
 
         connect.design_pool = spawn_pool
@@ -60,7 +61,10 @@ def main():
             save("output", dict(self.backend.output_dict))
             super()._on_design_done(error, traceback, cancelled)
             dataset = self.backend.get_results_dataset() if not error else None
+            cad = self.backend.get_3d_cad_parameters() if not error and not cancelled else None
             save("desktop-status", {
+                "analysis_span_m": self.backend.grillage_geometry.L if dataset is not None else None,
+                "cad_span_mm": cad.span_length_L if cad is not None else None,
                 "input_locked": self.input_dock.is_locked,
                 "dataset_dimensions": dict(dataset.sizes) if dataset is not None else {},
             })
@@ -79,7 +83,7 @@ def main():
         }
         fixture = {
             **window.input_dict,
-            KEY_SPAN: 30.0,
+            KEY_SPAN: args.span,
             KEY_CARRIAGEWAY_WIDTH: 7.5,
             KEY_SKEW_ANGLE: 0,
             KEY_PROJECT_LOCATION: {

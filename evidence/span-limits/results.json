@@ -1,0 +1,54 @@
+[
+  {
+    "requested_span_m": 20,
+    "normalized_input_span_m": 20.0,
+    "output_span_m": 20.0,
+    "reported_failed_checks": [],
+    "analysis_span_m": 20.0,
+    "cad_span_mm": 20000.0,
+    "input_locked": true,
+    "dataset_dimensions": {
+      "Loadcase": 50,
+      "Node": 84,
+      "Component": 30,
+      "Element": 148,
+      "Nodes": 2,
+      "Axis": 3
+    },
+    "design_status": {
+      "error": null,
+      "traceback": "",
+      "cancelled": false
+    },
+    "desktop_error": {},
+    "input_overall_width_m": 8.4,
+    "analysis_width_log": "Bridge width from layout: 8.5 m",
+    "result": "Pass"
+  },
+  {
+    "requested_span_m": 45,
+    "normalized_input_span_m": 45.0,
+    "output_span_m": 45.0,
+    "reported_failed_checks": [],
+    "analysis_span_m": 45.0,
+    "cad_span_mm": 45000.0,
+    "input_locked": true,
+    "dataset_dimensions": {
+      "Loadcase": 50,
+      "Node": 186,
+      "Component": 30,
+      "Element": 335,
+      "Nodes": 2,
+      "Axis": 3
+    },
+    "design_status": {
+      "error": null,
+      "traceback": "",
+      "cancelled": false
+    },
+    "desktop_error": {},
+    "input_overall_width_m": 8.4,
+    "analysis_width_log": "Bridge width from layout: 8.5 m",
+    "result": "Pass"
+  }
+]
