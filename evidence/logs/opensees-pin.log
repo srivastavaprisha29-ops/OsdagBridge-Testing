@@ -1,0 +1,41 @@
+Collecting openseespy==3.7.1.2
+  Downloading openseespy-3.7.1.2-py3-none-any.whl.metadata (2.3 kB)
+Collecting openseespylinux==3.7.1.2
+  Downloading openseespylinux-3.7.1.2-py3-none-any.whl.metadata (1.2 kB)
+Downloading openseespy-3.7.1.2-py3-none-any.whl (5.3 kB)
+Downloading openseespylinux-3.7.1.2-py3-none-any.whl (58.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.1/58.1 MB 35.6 MB/s  0:00:01
+Installing collected packages: openseespylinux, openseespy
+  Attempting uninstall: openseespylinux
+    Found existing installation: openseespylinux 3.8.0.0
+    Uninstalling openseespylinux-3.8.0.0:
+      Successfully uninstalled openseespylinux-3.8.0.0
+  Attempting uninstall: openseespy
+    Found existing installation: openseespy 3.8.0.0
+    Uninstalling openseespy-3.8.0.0:
+      Successfully uninstalled openseespy-3.8.0.0
+
+Successfully installed openseespy-3.7.1.2 openseespylinux-3.7.1.2
+[hwloc/linux] failed to find sysfs cpu topology directory, aborting linux discovery.
+Fatal error in internal_Init: Other MPI error, error stack:
+internal_Init(70)..................: MPI_Init(argc=0x7ffcd3304f1c, argv=0x7ffcd3304f10) failed
+MPII_Init_thread(255)..............: 
+MPID_Init(65)......................: 
+init_world(169)....................: channel initialization failed
+MPIDI_CH3_Init(84).................: 
+MPID_nem_init(314).................: 
+MPID_nem_tcp_init(175).............: 
+MPID_nem_tcp_get_business_card(400): 
+GetSockInterfaceAddr(362)..........: The network interface, "<NULL>", specified in MPIR_CVAR_CH3_NETWORK_IFACE was not found.
+[unset]: PMIU_write error; fd=-1 buf=:cmd=abort exitcode=742516751 message=Fatal error in internal_Init: Other MPI error, error stack:
+internal_Init(70)..................: MPI_Init(argc=0x7ffcd3304f1c, argv=0x7ffcd3304f10) failed
+MPII_Init_thread(255)..............: 
+MPID_Init(65)......................: 
+init_world(169)....................: channel initialization failed
+MPIDI_CH3_Init(84).................: 
+MPID_nem_init(314).................: 
+MPID_nem_tcp_init(175).............: 
+MPID_nem_tcp_get_business_card(400): 
+GetSockInterfaceAddr(362)..........: The network interface, "<NULL>", specified in MPIR_CVAR_CH3_NETWORK_IFACE was not found.
+:
+system msg for write_line failure : Bad file descriptor

@@ -1,0 +1,26 @@
+[hwloc/linux] failed to find sysfs cpu topology directory, aborting linux discovery.
+####### 3D rendering pipe initialisation #####
+Display3d class initialization starting ...
+Aspect_DisplayConnection created.
+OpenGl_GraphicDriver created.
+V3d_Viewer created.
+AIS_InteractiveContext created.
+V3d_View created
+Graphic3d_Camera created
+Graphic3d_StructureManager created
+Xw_Window created.
+Display3d class successfully initialized.
+#########################################
+OpenGl information:
+  GLvendor: Mesa
+  GLdevice: llvmpipe (LLVM 19.1.7, 256 bits)
+  GLversion: 4.5 (Compatibility Profile) Mesa 25.0.7-2+deb13u1
+  GLSLversion: 4.50
+  Max texture size: 16384
+  Max FBO dump size: 16384x16384
+  Max combined texture units: 192
+  Max MSAA samples: 4
+  Viewport: 100x30
+  Window buffer: RGB8 ALPHA8 DEPTH24 STENCIL8
+  ResolutionRatio: 1
+  FBO buffer: GL_SRGB8_ALPHA8 GL_DEPTH24_STENCIL8

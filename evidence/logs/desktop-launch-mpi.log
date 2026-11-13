@@ -1,0 +1,15 @@
+[INFO] osdag_core Intg_osdag sqlite database built from SQL
+[hwloc/linux] failed to find sysfs cpu topology directory, aborting linux discovery.
+Fatal error in internal_Init: Other MPI error, error stack:
+internal_Init(70)..................: MPI_Init(argc=0x7ffecc14241c, argv=0x7ffecc142410) failed
+MPII_Init_thread(257)..............: 
+MPID_Init(65)......................: 
+init_world(169)....................: channel initialization failed
+MPIDI_CH3_Init(84).................: 
+MPID_nem_init(314).................: 
+MPID_nem_tcp_init(175).............: 
+MPID_nem_tcp_get_business_card(400): 
+GetSockInterfaceAddr(361)..........: The network interface, "<NULL>", specified in MPIR_CVAR_CH3_NETWORK_IFACE was not found.
+[unset]: PMIU_write error; fd=-1 buf=:cmd=abort exitcode=608299279 message=abort
+:
+system msg for write_line failure : Bad file descriptor

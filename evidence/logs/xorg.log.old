@@ -1,0 +1,16 @@
+[   275.204] _XSERVTransSocketOpenCOTSServer: Unable to open socket for local
+[   275.204] _XSERVTransOpen: transport open failed for local/11c48cfa09c1:71
+[   275.204] _XSERVTransMakeAllCOTSServerListeners: failed to open listener for local
+[   275.204] _XSERVTransSocketOpenCOTSServer: Unable to open socket for unix
+[   275.204] _XSERVTransOpen: transport open failed for unix/11c48cfa09c1:71
+[   275.204] _XSERVTransMakeAllCOTSServerListeners: failed to open listener for unix
+[   275.204] (EE) 
+Fatal server error:
+[   275.204] (EE) Cannot establish any listening sockets - Make sure an X server isn't already running(EE) 
+[   275.204] (EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+[   275.204] (EE) Please also check the log file at "<workspace>/OsdagBridge-Testing/evidence/logs/xorg.log" for additional information.
+[   275.204] (EE) 
+[   275.204] (EE) Server terminated with error (1). Closing log file.

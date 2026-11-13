@@ -1,0 +1,20 @@
+Collecting openseespy==3.8.0.0
+  Using cached openseespy-3.8.0.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting openseespylinux==3.8.0.0
+  Using cached openseespylinux-3.8.0.0-py3-none-any.whl.metadata (1.2 kB)
+Using cached openseespy-3.8.0.0-py3-none-any.whl (2.8 kB)
+Using cached openseespylinux-3.8.0.0-py3-none-any.whl (86.3 MB)
+Installing collected packages: openseespylinux, openseespy
+  Attempting uninstall: openseespylinux
+    Found existing installation: openseespylinux 3.7.1.2
+    Uninstalling openseespylinux-3.7.1.2:
+      Successfully uninstalled openseespylinux-3.7.1.2
+  Attempting uninstall: openseespy
+    Found existing installation: openseespy 3.7.1.2
+    Uninstalling openseespy-3.7.1.2:
+      Successfully uninstalled openseespy-3.7.1.2
+
+Successfully installed openseespy-3.8.0.0 openseespylinux-3.8.0.0
+[hwloc/linux] failed to find sysfs cpu topology directory, aborting linux discovery.
+3.8.0
+Process 0 Terminating
