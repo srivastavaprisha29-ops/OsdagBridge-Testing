@@ -1,0 +1,80 @@
+{
+  "default_inputs": {
+    "material.girder": "E 350A",
+    "material.girder.fy": "350.0",
+    "material.girder.fu": "490.0",
+    "material.girder.e": "200.0",
+    "material.girder.density": "76.4",
+    "material.deck": "M40",
+    "material.deck.fck": "40.0",
+    "material.deck.fctm": "3.0",
+    "material.deck.ecm": "33.0"
+  },
+  "normalized_inputs": {
+    "material.girder": "custom_steel_345_510",
+    "material.girder.fy": 345,
+    "material.girder.fu": 510,
+    "material.girder.e": 194.6,
+    "material.girder.density": 80,
+    "material.deck": "custom_concrete_42_3.4",
+    "material.deck.fck": 42,
+    "material.deck.fctm": 3.4,
+    "material.deck.ecm": 34
+  },
+  "output_dictionary": {
+    "material.girder": "custom_steel_345_510",
+    "material.girder.fy": 345,
+    "material.girder.fu": 510,
+    "material.girder.e": 194.6,
+    "material.girder.density": 80,
+    "material.deck": "custom_concrete_42_3.4",
+    "material.deck.fck": 42,
+    "material.deck.fctm": 3.4,
+    "material.deck.ecm": 34
+  },
+  "calculation_materials": {
+    "steel": {
+      "grade": "custom_steel_345_510",
+      "E": 194600000000.0,
+      "v": 0.28,
+      "rho": 78500.0,
+      "Fy": 345000000.0,
+      "Fu": 510000000.0,
+      "E0": 200000000000.0,
+      "b": 0.01
+    },
+    "concrete": {
+      "grade": "custom_concrete_42_3.4",
+      "fck": 42.0,
+      "fctm": 3.4,
+      "Ecm": 34.0
+    }
+  },
+  "design_status": {
+    "error": null,
+    "traceback": "",
+    "cancelled": false
+  },
+  "desktop_status": {
+    "cad_girders": 4,
+    "cad_deck_mm": 250.0,
+    "analysis_grid_lines": 6,
+    "analysis_span_m": 30.0,
+    "cad_span_mm": 30000.0,
+    "input_locked": true,
+    "dataset_dimensions": {
+      "Loadcase": 50,
+      "Node": 126,
+      "Component": 30,
+      "Element": 225,
+      "Nodes": 2,
+      "Axis": 3
+    }
+  },
+  "self_weight_log": [
+    "Self weight line load @ z=1.050 m: 3024.70 N/m (A=0.03853 m\u00b2)",
+    "Self weight line load @ z=3.183 m: 3024.70 N/m (A=0.03853 m\u00b2)",
+    "Self weight line load @ z=5.317 m: 3024.70 N/m (A=0.03853 m\u00b2)",
+    "Self weight line load @ z=7.450 m: 3024.70 N/m (A=0.03853 m\u00b2)"
+  ]
+}

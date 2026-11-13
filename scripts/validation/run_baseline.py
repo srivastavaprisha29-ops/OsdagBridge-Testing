@@ -15,6 +15,8 @@ from osdagbridge.core.utils.common import (
     KEY_PROJECT_LOCATION,
     KEY_SKEW_ANGLE,
     KEY_SPAN,
+    KEY_GIRDER,
+    KEY_DECK_CONCRETE_GRADE_BASIC,
     KEY_PL_SELF_WEIGHT_FACTOR,
     KEY_SC_LEFT_SUPPORT,
     KEY_SC_RIGHT_SUPPORT,
@@ -28,6 +30,7 @@ def main():
     parser.add_argument("--spawn", action="store_true", help="Use the application's alternate worker start method")
     parser.add_argument("--span", type=float, default=30.0, help="Span in metres")
     parser.add_argument("--variations", action="store_true", help="Exercise geometry and additional inputs")
+    parser.add_argument("--custom-materials", action="store_true")
     args = parser.parse_args()
     evidence = args.evidence
     if args.spawn:
@@ -47,6 +50,14 @@ def main():
         )
 
     class ObservedBridge(PlateGirderBridge):
+        def _build_material_props(self):
+            properties = super()._build_material_props()
+            save("calculation-materials", {
+                "steel": vars(properties.steel_prop),
+                "concrete": vars(properties.concrete_prop),
+            })
+            return properties
+
         def set_input(self, inputs):
             save("input-handoff", inputs)
             super().set_input(inputs)
@@ -142,6 +153,42 @@ def main():
             dialog.close()
         else:
             window._get_additional_inputs().set_input_dictionary(window.input_dict)
+        if args.custom_materials:
+            from osdagbridge.desktop.ui.docks import input_dock
+
+            custom_fields = {
+                KEY_GIRDER: {
+                    "material.girder.fy": "345", "material.girder.fu": "510",
+                    "material.girder.e": "195", "material.girder.density": "80",
+                    "material.girder.poisson": "0.28", "material.girder.g": "76",
+                },
+                KEY_DECK_CONCRETE_GRADE_BASIC: {
+                    "material.deck.fck": "42", "material.deck.fctm": "3.4",
+                    "material.deck.ecm": "34",
+                },
+            }
+            dock = window.input_dock
+            dock._prime_material_inputs()
+            save("default-materials", {
+                key: value for key, value in window.input_dict.items()
+                if key.startswith("material.")
+            })
+
+            class FixtureMaterialDialog(input_dock.MaterialPropertiesDialog):
+                def exec(self):
+                    for key, value in custom_fields[self.member].items():
+                        self.field_inputs[key].setText(value)
+                        self.field_inputs[key].textEdited.emit(value)
+                    self._validate_and_save()
+                    return self.result()
+
+            input_dock.MaterialPropertiesDialog = FixtureMaterialDialog
+            for member in custom_fields:
+                combo = dock._material_combo_map[member]
+                combo.setCurrentText(input_dock.MATERIAL_CUSTOM_OPTION)
+                if combo.currentText() == input_dock.MATERIAL_CUSTOM_OPTION:
+                    raise RuntimeError(f"Custom material was not saved for {member}")
+
         window.input_dock.design_btn.click()
 
     QTimer.singleShot(500, run)

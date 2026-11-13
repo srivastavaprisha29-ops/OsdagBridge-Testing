@@ -9,3 +9,5 @@
 - Full desktop designs completed at both advertised span limits. See the [span results](evidence/span-limits/results.json).
 
 - WP3 girder, deck, support and load checks are recorded in the [variation results](evidence/design-variations/results.json).
+
+- WP4 combined material design and nine property checks are recorded in the [customization register](test_cases/customization_tests.csv).

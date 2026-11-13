@@ -1,0 +1,10 @@
+id,field,default,expected,input,output,calculation,unit,result
+M01,material.girder,E 350A,custom_steel_345_510,custom_steel_345_510,custom_steel_345_510,custom_steel_345_510,grade,Pass
+M02,material.girder.fy,350.0,345,345,345,345.0,MPa,Pass
+M03,material.girder.fu,490.0,510,510,510,510.0,MPa,Pass
+M04,material.girder.e,200.0,194.6,194.6,194.6,194.6,GPa,Pass
+M05,material.girder.density,76.4,80,80,80,78.5,kN/m³,Fail
+M06,material.deck,M40,custom_concrete_42_3.4,custom_concrete_42_3.4,custom_concrete_42_3.4,custom_concrete_42_3.4,grade,Pass
+M07,material.deck.fck,40.0,42,42,42,42.0,MPa,Pass
+M08,material.deck.fctm,3.0,3.4,3.4,3.4,3.4,MPa,Pass
+M09,material.deck.ecm,33.0,34,34,34,34.0,GPa,Pass
