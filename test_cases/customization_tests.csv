@@ -8,3 +8,8 @@ M06,material.deck,M40,custom_concrete_42_3.4,custom_concrete_42_3.4,custom_concr
 M07,material.deck.fck,40.0,42,42,42,42.0,MPa,Pass
 M08,material.deck.fctm,3.0,3.4,3.4,3.4,3.4,MPa,Pass
 M09,material.deck.ecm,33.0,34,34,34,34.0,GPa,Pass
+M10,G2 web thickness in analysis,10,20,20,0.02,20,mm except output in m,Pass
+M11,Web thickness isolation in CAD,10,G2 only at 20,G2 only at 20,G2 only at 0.02 m,Uniform 20 mm CAD segment,mm,Fail
+M12,G2 bearing stiffener dimensions,10 x 250,16 x 200,16 x 200,16 x 200,16 x 200 in capacity and CAD,mm,Pass
+M13,Report steel unit weight applied,76.4,78.5 actual,80,80,PDF labels 80 applied; backend 78.5,kN/m3,Fail
+M14,Report section dimensions,1670 x 10,1670 x 10,1670 x 10,1.67 x 0.01,PDF labels 1.67 x 0.01 as mm,mm except output in m,Fail

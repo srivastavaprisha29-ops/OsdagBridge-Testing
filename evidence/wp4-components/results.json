@@ -1,0 +1,270 @@
+{
+  "girder": {
+    "defaults": {
+      "member_properties.girder_details.section_input.web_thickness": [
+        "10",
+        "10",
+        "10",
+        "10"
+      ]
+    },
+    "input_by_girder": {
+      "member_properties.girder_details.section_input.web_thickness": [
+        10,
+        20,
+        10,
+        10
+      ]
+    },
+    "output_by_girder": {
+      "member_properties.girder_details.section_input.web_thickness": [
+        0.01,
+        0.02,
+        0.01,
+        0.01
+      ]
+    },
+    "capacity_calculator_configs": [
+      {
+        "web_mm": 10.0,
+        "bearing_plate_mm": 10.0,
+        "bearing_outstand_mm": 250.0,
+        "calls": 153
+      },
+      {
+        "web_mm": 20.0,
+        "bearing_plate_mm": 10.0,
+        "bearing_outstand_mm": 250.0,
+        "calls": 51
+      }
+    ],
+    "analysis_Az_m2": [
+      0.01625,
+      0.0325,
+      0.01625,
+      0.01625
+    ],
+    "cad": {
+      "web_mm": 20.0,
+      "girder_segments": {},
+      "stiffeners": {
+        "0": {
+          "include_intermediate_stiffeners": true,
+          "intermediate_stiffener_spacing": 2435.0,
+          "intermediate_stiffener_thickness": 10.0,
+          "intermediate_stiffener_outstand": 250.0,
+          "num_end_stiffener_pairs": 4,
+          "end_stiffener_thickness": 10.0,
+          "end_stiffener_outstand": 250.0,
+          "include_longitudinal_stiffeners": false,
+          "num_longitudinal_stiffeners": 1,
+          "longitudinal_stiffener_thickness": 0.0,
+          "longitudinal_stiffener_outstand": null
+        },
+        "1": {
+          "include_intermediate_stiffeners": true,
+          "intermediate_stiffener_spacing": 2435.0,
+          "intermediate_stiffener_thickness": 10.0,
+          "intermediate_stiffener_outstand": 250.0,
+          "num_end_stiffener_pairs": 4,
+          "end_stiffener_thickness": 10.0,
+          "end_stiffener_outstand": 250.0,
+          "include_longitudinal_stiffeners": false,
+          "num_longitudinal_stiffeners": 1,
+          "longitudinal_stiffener_thickness": 0.0,
+          "longitudinal_stiffener_outstand": null
+        },
+        "2": {
+          "include_intermediate_stiffeners": true,
+          "intermediate_stiffener_spacing": 2435.0,
+          "intermediate_stiffener_thickness": 10.0,
+          "intermediate_stiffener_outstand": 250.0,
+          "num_end_stiffener_pairs": 4,
+          "end_stiffener_thickness": 10.0,
+          "end_stiffener_outstand": 250.0,
+          "include_longitudinal_stiffeners": false,
+          "num_longitudinal_stiffeners": 1,
+          "longitudinal_stiffener_thickness": 0.0,
+          "longitudinal_stiffener_outstand": null
+        },
+        "3": {
+          "include_intermediate_stiffeners": true,
+          "intermediate_stiffener_spacing": 2435.0,
+          "intermediate_stiffener_thickness": 10.0,
+          "intermediate_stiffener_outstand": 250.0,
+          "num_end_stiffener_pairs": 4,
+          "end_stiffener_thickness": 10.0,
+          "end_stiffener_outstand": 250.0,
+          "include_longitudinal_stiffeners": false,
+          "num_longitudinal_stiffeners": 1,
+          "longitudinal_stiffener_thickness": 0.0,
+          "longitudinal_stiffener_outstand": null
+        }
+      }
+    },
+    "desktop": {
+      "cad_girders": 4,
+      "cad_deck_mm": 250.0,
+      "analysis_grid_lines": 6,
+      "analysis_span_m": 30.0,
+      "cad_span_mm": 30000.0,
+      "input_locked": true,
+      "dataset_dimensions": {
+        "Loadcase": 50,
+        "Node": 126,
+        "Component": 30,
+        "Element": 225,
+        "Nodes": 2,
+        "Axis": 3
+      }
+    }
+  },
+  "stiffener": {
+    "defaults": {
+      "member_properties.stiffener_details.bearing_stiffener_plate_thickness": [
+        "10",
+        "10",
+        "10",
+        "10"
+      ],
+      "member_properties.stiffener_details.bearing_stiffener_outstand": [
+        "250",
+        "250",
+        "250",
+        "250"
+      ]
+    },
+    "input_by_girder": {
+      "member_properties.stiffener_details.bearing_stiffener_plate_thickness": [
+        10,
+        16,
+        10,
+        10
+      ],
+      "member_properties.stiffener_details.bearing_stiffener_outstand": [
+        250,
+        200,
+        250,
+        250
+      ]
+    },
+    "output_by_girder": {
+      "member_properties.stiffener_details.bearing_stiffener_plate_thickness": [
+        10,
+        16,
+        10,
+        10
+      ],
+      "member_properties.stiffener_details.bearing_stiffener_outstand": [
+        250,
+        200,
+        250,
+        250
+      ]
+    },
+    "capacity_calculator_configs": [
+      {
+        "web_mm": 10.0,
+        "bearing_plate_mm": 10.0,
+        "bearing_outstand_mm": 250.0,
+        "calls": 153
+      },
+      {
+        "web_mm": 10.0,
+        "bearing_plate_mm": 16.0,
+        "bearing_outstand_mm": 200.0,
+        "calls": 51
+      }
+    ],
+    "analysis_Az_m2": [
+      0.01625,
+      0.01625,
+      0.01625,
+      0.01625
+    ],
+    "cad": {
+      "web_mm": 10.0,
+      "girder_segments": {},
+      "stiffeners": {
+        "0": {
+          "include_intermediate_stiffeners": true,
+          "intermediate_stiffener_spacing": 2435.0,
+          "intermediate_stiffener_thickness": 10.0,
+          "intermediate_stiffener_outstand": 250.0,
+          "num_end_stiffener_pairs": 4,
+          "end_stiffener_thickness": 10.0,
+          "end_stiffener_outstand": 250.0,
+          "include_longitudinal_stiffeners": false,
+          "num_longitudinal_stiffeners": 1,
+          "longitudinal_stiffener_thickness": 0.0,
+          "longitudinal_stiffener_outstand": null
+        },
+        "1": {
+          "include_intermediate_stiffeners": true,
+          "intermediate_stiffener_spacing": 2435.0,
+          "intermediate_stiffener_thickness": 10.0,
+          "intermediate_stiffener_outstand": 250.0,
+          "num_end_stiffener_pairs": 4,
+          "end_stiffener_thickness": 16.0,
+          "end_stiffener_outstand": 200.0,
+          "include_longitudinal_stiffeners": false,
+          "num_longitudinal_stiffeners": 1,
+          "longitudinal_stiffener_thickness": 0.0,
+          "longitudinal_stiffener_outstand": null
+        },
+        "2": {
+          "include_intermediate_stiffeners": true,
+          "intermediate_stiffener_spacing": 2435.0,
+          "intermediate_stiffener_thickness": 10.0,
+          "intermediate_stiffener_outstand": 250.0,
+          "num_end_stiffener_pairs": 4,
+          "end_stiffener_thickness": 10.0,
+          "end_stiffener_outstand": 250.0,
+          "include_longitudinal_stiffeners": false,
+          "num_longitudinal_stiffeners": 1,
+          "longitudinal_stiffener_thickness": 0.0,
+          "longitudinal_stiffener_outstand": null
+        },
+        "3": {
+          "include_intermediate_stiffeners": true,
+          "intermediate_stiffener_spacing": 2435.0,
+          "intermediate_stiffener_thickness": 10.0,
+          "intermediate_stiffener_outstand": 250.0,
+          "num_end_stiffener_pairs": 4,
+          "end_stiffener_thickness": 10.0,
+          "end_stiffener_outstand": 250.0,
+          "include_longitudinal_stiffeners": false,
+          "num_longitudinal_stiffeners": 1,
+          "longitudinal_stiffener_thickness": 0.0,
+          "longitudinal_stiffener_outstand": null
+        }
+      }
+    },
+    "desktop": {
+      "cad_girders": 4,
+      "cad_deck_mm": 250.0,
+      "analysis_grid_lines": 6,
+      "analysis_span_m": 30.0,
+      "cad_span_mm": 30000.0,
+      "input_locked": true,
+      "dataset_dimensions": {
+        "Loadcase": 50,
+        "Node": 126,
+        "Component": 30,
+        "Element": 225,
+        "Nodes": 2,
+        "Axis": 3
+      }
+    }
+  },
+  "report": {
+    "input_unit_weight_kN_m3": 80,
+    "output_unit_weight_kN_m3": 80,
+    "resolved_unit_weight_kN_m3": 78.5,
+    "pdf_unit_weight_applied_kN_m3": 80,
+    "pdf_section_example": "G2: depth 1.67 mm, web 0.01 mm",
+    "design_section_depth_mm": 1670,
+    "design_web_mm": 10,
+    "grade_labels_match": true
+  }
+}

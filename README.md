@@ -11,3 +11,5 @@
 - WP3 girder, deck, support and load checks are recorded in the [variation results](evidence/design-variations/results.json).
 
 - WP4 combined material design and nine property checks are recorded in the [customization register](test_cases/customization_tests.csv).
+
+- WP4 component checks and the report comparison are recorded in the [verification notes](evidence/wp4-components/README.md).

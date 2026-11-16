@@ -7,7 +7,7 @@ from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
 from PySide6.QtCore import QTimer
-from PySide6.QtWidgets import QApplication, QComboBox, QLineEdit
+from PySide6.QtWidgets import QApplication, QComboBox, QLineEdit, QWidget
 
 from osdagbridge.desktop.__main__ import CustomWindow, PlateGirderBridge
 from osdagbridge.core.utils.common import (
@@ -15,6 +15,12 @@ from osdagbridge.core.utils.common import (
     KEY_PROJECT_LOCATION,
     KEY_SKEW_ANGLE,
     KEY_SPAN,
+    KEY_DESIGN_MODE,
+    KEY_MP_GD_SELECT_GIRDER,
+    KEY_MP_GIRDER_WEB_THICKNESS,
+    KEY_MP_STIFFENER_SELECT_MEMBER_ID,
+    KEY_MP_STIFFENER_BEARING_THICKNESS,
+    KEY_MP_STIFFENER_BEARING_OUTSTAND,
     KEY_GIRDER,
     KEY_DECK_CONCRETE_GRADE_BASIC,
     KEY_PL_SELF_WEIGHT_FACTOR,
@@ -31,6 +37,8 @@ def main():
     parser.add_argument("--span", type=float, default=30.0, help="Span in metres")
     parser.add_argument("--variations", action="store_true", help="Exercise geometry and additional inputs")
     parser.add_argument("--custom-materials", action="store_true")
+    parser.add_argument("--component", choices=("girder", "stiffener"))
+    parser.add_argument("--report", action="store_true")
     args = parser.parse_args()
     evidence = args.evidence
     if args.spawn:
@@ -57,6 +65,34 @@ def main():
                 "concrete": vars(properties.concrete_prop),
             })
             return properties
+
+        def _run_dcr_checks(self, dataset):
+            if not args.component:
+                return super()._run_dcr_checks(dataset)
+            from osdagbridge.core.bridge_types.plate_girder import designer
+
+            calculator = designer.IRC22CapacityCalculator
+            applied = []
+
+            class ObservedCalculator(calculator):
+                def compute_all(self, *values, **options):
+                    applied.append({
+                        "section": vars(self.cfg.section),
+                        "stiffener": vars(self.cfg.stiffener),
+                    })
+                    return super().compute_all(*values, **options)
+
+            designer.IRC22CapacityCalculator = ObservedCalculator
+            try:
+                return super()._run_dcr_checks(dataset)
+            finally:
+                designer.IRC22CapacityCalculator = calculator
+                save("calculation-components", applied)
+
+        def setup_grillage(self):
+            super().setup_grillage()
+            if args.component:
+                save("analysis-sections", [vars(section) for section in self.grillage_model.girder_props])
 
         def set_input(self, inputs):
             save("input-handoff", inputs)
@@ -87,13 +123,33 @@ def main():
                 "input_locked": self.input_dock.is_locked,
                 "dataset_dimensions": dict(dataset.sizes) if dataset is not None else {},
             })
+            if args.component and cad:
+                save("component-cad", {
+                    "web_mm": cad.girder_section_tw,
+                    "girder_segments": cad.girder_segments_dict,
+                    "stiffeners": cad.stiffeners_dict,
+                })
             self.grab().save(str(evidence / "desktop-result.png"))
-            QTimer.singleShot(0, app.quit)
+            QTimer.singleShot(0, export_report if args.report and cad else app.quit)
 
     app = QApplication([])
     window = ObservedWindow("OsdagBridge baseline", ObservedBridge)
     window.resize(1250, 760)
     window.show()
+
+    def export_report():
+        from osdagbridge.core.reports.report_generator import ReportMetadata, ReportOptions, ReportRequest
+
+        request = ReportRequest(
+            ReportMetadata("Custom Material Test", "", "", "", ""),
+            ReportOptions(["loads"], False, False, True),
+            str(evidence), "Custom_Material_Design_Report",
+        )
+        try:
+            result = window.backend.generate_design_report(request, {})
+            save("report-status", {"pdf": bool(result.pdf_path), "tex": bool(result.tex_path)})
+        finally:
+            app.quit()
 
     def run():
         weather = {
@@ -103,6 +159,7 @@ def main():
         fixture = {
             **window.input_dict,
             KEY_SPAN: args.span,
+            **({KEY_DESIGN_MODE: "Custom"} if args.component else {}),
             KEY_CARRIAGEWAY_WIDTH: 10.0 if args.variations else 7.5,
             KEY_SKEW_ANGLE: 0,
             KEY_PROJECT_LOCATION: {
@@ -113,7 +170,7 @@ def main():
         }
         save("fixture", fixture)
         window.input_dock.populate_from_dict(fixture)
-        if args.variations:
+        if args.variations or args.component:
             from osdagbridge.desktop.ui.dialogs.additional_input import additional_inputs
 
             class RecordDialog:
@@ -125,13 +182,39 @@ def main():
 
             messages = []
             additional_inputs.CustomMessageBox = RecordDialog
-            window.common_design_func("Additional Inputs")
+            if args.component:
+                window.input_dock._on_design_mode_changed("Custom")
+            else:
+                window.common_design_func("Additional Inputs")
             dialog = window._get_additional_inputs()
-            for key, value in ((KEY_TS_DECK_THICKNESS, "300"),
-                               (KEY_PL_SELF_WEIGHT_FACTOR, "1.25")):
-                field = dialog.findChild(QLineEdit, key)
-                field.setText(value)
-                field.editingFinished.emit()
+            changes = ((KEY_TS_DECK_THICKNESS, "300"), (KEY_PL_SELF_WEIGHT_FACTOR, "1.25"))
+            if args.component == "girder":
+                selector = dialog.findChild(QComboBox, KEY_MP_GD_SELECT_GIRDER)
+                selector.setCurrentIndex(1)
+                changes = ((KEY_MP_GIRDER_WEB_THICKNESS, "20"),)
+            if args.component == "stiffener":
+                selector = dialog.findChild(QComboBox, KEY_MP_STIFFENER_SELECT_MEMBER_ID)
+                selector.setCurrentText("G2M1")
+                if selector.currentText() != "G2M1":
+                    raise RuntimeError("Could not select bearing stiffener G2M1")
+                changes = ((KEY_MP_STIFFENER_BEARING_THICKNESS, "16"),
+                           (KEY_MP_STIFFENER_BEARING_OUTSTAND, "200"))
+            if args.component:
+                save("component-defaults", {
+                    key: [dialog.working_input_dict.get(f"{key}.G{i}.M1") for i in range(1, 5)]
+                    for key, _ in changes
+                })
+            for key, value in changes:
+                field = dialog.findChild(QWidget, key)
+                if not isinstance(field, (QLineEdit, QComboBox)):
+                    field = field.currentWidget()
+                if isinstance(field, QComboBox):
+                    if field.findText(value) < 0:
+                        raise ValueError(f"{key} has no option {value}")
+                    field.setCurrentText(value)
+                else:
+                    field.setText(value)
+                    field.editingFinished.emit()
 
             support_options = {}
             for key in (KEY_SC_LEFT_SUPPORT, KEY_SC_RIGHT_SUPPORT):
