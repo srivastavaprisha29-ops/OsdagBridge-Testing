@@ -15,3 +15,5 @@
 - WP4 component checks and the report comparison are recorded in the [verification notes](evidence/wp4-components/README.md).
 
 - WP5 same-session designs and unlock checks are recorded in the [multi-run register](test_cases/multi_run_tests.csv).
+
+- WP6 report parity and independent load checks are recorded in the [output validation register](test_cases/output_validation.csv).
