@@ -1,0 +1,164 @@
+{
+  "runs": [
+    {
+      "run": 1,
+      "pid": 15,
+      "gui": {
+        "geometry.span": 20.0,
+        "material.girder": "E 350A",
+        "material.deck": "M40"
+      },
+      "input": {
+        "geometry.span": 20,
+        "material.girder": "E 350A",
+        "material.deck": "M40",
+        "typical_section.deck_thickness": 250.0
+      },
+      "output": {
+        "geometry.span": 20,
+        "material.girder": "E 350A",
+        "material.deck": "M40",
+        "typical_section.deck_thickness": 250.0
+      },
+      "analysis_span_m": 20.0,
+      "resolved_steel": "E 350A",
+      "resolved_concrete": "M40",
+      "cad_span_mm": 20000.0,
+      "cad_deck_mm": 250.0,
+      "cad_generated": true,
+      "plot_bound_to_current_dataset": true,
+      "plot_axes_count": 1,
+      "dataset_sizes": {
+        "Loadcase": 50,
+        "Node": 84,
+        "Component": 30,
+        "Element": 148,
+        "Nodes": 2,
+        "Axis": 3
+      },
+      "results_hashes": {
+        "displacements": "fe341dc658c159eaba465d3a5b8a479b7a2c6e42111e8566b64c9e6cd668cda3",
+        "velocity": "698385106af7d5a77d153f8eb8ff35cb418ef7d03ba9f6cc7c2fae127858d178",
+        "acceleration": "50f49740e9f00294f370586ded824ef49fd45698b1154af8b19540d1363b6ef8",
+        "forces": "7d2086e9f572a56ce93cd28425a7713f63b4ba231619e5ca5afe5b4e98220c53",
+        "ele_nodes": "295e9f182c291f1b8a10fce84a057d5122e6ad85d28087d1ba79d072df14ab92",
+        "node_coordinates": "6098376b41f08d3871263145c70a307a99e05909d1802bf7e0106e37c682fb37"
+      },
+      "locked": true
+    },
+    {
+      "run": 2,
+      "pid": 15,
+      "gui": {
+        "geometry.span": 25.0,
+        "material.girder": "E 250A",
+        "material.deck": "M40"
+      },
+      "input": {
+        "geometry.span": 25,
+        "material.girder": "E 250A",
+        "material.deck": "M40",
+        "typical_section.deck_thickness": 250.0
+      },
+      "output": {
+        "geometry.span": 25,
+        "material.girder": "E 250A",
+        "material.deck": "M40",
+        "typical_section.deck_thickness": 250.0
+      },
+      "analysis_span_m": 25.0,
+      "resolved_steel": "E 250A",
+      "resolved_concrete": "M40",
+      "cad_span_mm": 25000.0,
+      "cad_deck_mm": 250.0,
+      "cad_generated": true,
+      "plot_bound_to_current_dataset": true,
+      "plot_axes_count": 1,
+      "dataset_sizes": {
+        "Loadcase": 50,
+        "Node": 108,
+        "Component": 30,
+        "Element": 192,
+        "Nodes": 2,
+        "Axis": 3
+      },
+      "results_hashes": {
+        "displacements": "ceb38de216df2b6baf92c3af602baf0c5d409c801d0666adb37d07ed3e5e12df",
+        "velocity": "c48dbef07923489d0f7c09f9eb94758c7d0b011592aa150b511086b0697a2957",
+        "acceleration": "e668300c7df335ad345d3f47f64c0051592d38427d5f68a353f46c52694cdaa8",
+        "forces": "b8ef940eed6cc2165729f7c149a1c5bcab876846a8efc22b93cab514b87a3c11",
+        "ele_nodes": "26dd7ca1a2a6f003ec871686ad847d97455e67ec758c2bde4431874cf8babb14",
+        "node_coordinates": "06b96c404ff12c730a57ef68c1ff966bb4bdea9534b8dbc9d3ba412bce23da1c"
+      },
+      "locked": true
+    },
+    {
+      "run": 3,
+      "pid": 15,
+      "gui": {
+        "geometry.span": 25.0,
+        "material.girder": "E 250A",
+        "material.deck": "M45"
+      },
+      "input": {
+        "geometry.span": 25,
+        "material.girder": "E 250A",
+        "material.deck": "M45",
+        "typical_section.deck_thickness": 300
+      },
+      "output": {
+        "geometry.span": 25,
+        "material.girder": "E 250A",
+        "material.deck": "M45",
+        "typical_section.deck_thickness": 300
+      },
+      "analysis_span_m": 25.0,
+      "resolved_steel": "E 250A",
+      "resolved_concrete": "M45",
+      "cad_span_mm": 25000.0,
+      "cad_deck_mm": 300.0,
+      "cad_generated": true,
+      "plot_bound_to_current_dataset": true,
+      "plot_axes_count": 1,
+      "dataset_sizes": {
+        "Loadcase": 50,
+        "Node": 108,
+        "Component": 30,
+        "Element": 192,
+        "Nodes": 2,
+        "Axis": 3
+      },
+      "results_hashes": {
+        "displacements": "d32194039430d6eb13698de630b282b3d2b82d94869258938f49bf19b396e9f9",
+        "velocity": "88f7794409297cd3eb7bc878cd5e66bd8e69bd308e3f7d23825530e8227c5542",
+        "acceleration": "ee27affd38e8db52aa33aa0d2ac03be0bb5ed556d0283cba9884f2071cf948f3",
+        "forces": "30e840e02f4f5926bdc3bab82d717e2a05bb0cdba49c44cf0c500693180461bd",
+        "ele_nodes": "26dd7ca1a2a6f003ec871686ad847d97455e67ec758c2bde4431874cf8babb14",
+        "node_coordinates": "06b96c404ff12c730a57ef68c1ff966bb4bdea9534b8dbc9d3ba412bce23da1c"
+      },
+      "locked": true
+    }
+  ],
+  "unlocks": [
+    {
+      "after_run": 1,
+      "unlocked": true,
+      "design_enabled": true,
+      "output_empty": true,
+      "analysis_cleared": true,
+      "cad_cleared": true,
+      "plot_dataset_cleared": true,
+      "plot_axes_cleared": true
+    },
+    {
+      "after_run": 2,
+      "unlocked": true,
+      "design_enabled": true,
+      "output_empty": true,
+      "analysis_cleared": true,
+      "cad_cleared": true,
+      "plot_dataset_cleared": true,
+      "plot_axes_cleared": true
+    }
+  ]
+}

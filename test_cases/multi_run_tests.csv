@@ -1,0 +1,7 @@
+id,step,fixture,expected,result
+R1,Design,"20 m, E 350A, M40, 250 mm",Current values in GUI dictionaries analysis CAD and plot binding,Pass
+R2,Design,"25 m, E 250A, M40, 250 mm",Current values in GUI dictionaries analysis CAD and plot binding,Pass
+R3,Design,"25 m, E 250A, M45, 300 mm",Current values in GUI dictionaries analysis CAD and plot binding,Pass
+U1,Unlock,Continue confirmed,Outputs analysis CAD and plots clear,Pass
+U2,Unlock,Continue confirmed,Outputs analysis CAD and plots clear,Pass
+D1,Across runs,All three designs,Different displacement array hashes,Pass
