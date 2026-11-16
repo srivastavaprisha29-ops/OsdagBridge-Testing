@@ -1,0 +1,56 @@
+[
+  {
+    "check": "desktop wind speed",
+    "expected": 39,
+    "observed": 39.0,
+    "pass": true
+  },
+  {
+    "check": "legacy wind speed",
+    "expected": 37,
+    "observed": 37.0,
+    "pass": true
+  },
+  {
+    "check": "missing wind speed",
+    "expected": 33,
+    "observed": 33.0,
+    "pass": true
+  },
+  {
+    "check": "explicit zero wind skips load",
+    "expected": null,
+    "observed": null,
+    "pass": true
+  },
+  {
+    "check": "desktop barrier load",
+    "expected": 7.56,
+    "observed": 7.56,
+    "pass": true
+  },
+  {
+    "check": "legacy barrier load",
+    "expected": 5.5,
+    "observed": 5.5,
+    "pass": true
+  },
+  {
+    "check": "missing barrier load",
+    "expected": 6.54,
+    "observed": 6.54,
+    "pass": true
+  },
+  {
+    "check": "explicit zero barrier load",
+    "expected": 0,
+    "observed": 0.0,
+    "pass": true
+  },
+  {
+    "check": "pressure from desktop wind speed",
+    "expected": 647.65,
+    "observed": 647.65,
+    "pass": true
+  }
+]

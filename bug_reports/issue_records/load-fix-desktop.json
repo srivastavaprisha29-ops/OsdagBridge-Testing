@@ -1,0 +1,27 @@
+{
+  "status": {
+    "error": null,
+    "traceback": "",
+    "cancelled": false
+  },
+  "desktop": {
+    "cad_girders": 4,
+    "cad_deck_mm": 250.0,
+    "analysis_grid_lines": 6,
+    "analysis_span_m": 30.0,
+    "cad_span_mm": 30000.0,
+    "input_locked": true,
+    "dataset_dimensions": {
+      "Loadcase": 50,
+      "Node": 126,
+      "Component": 30,
+      "Element": 225,
+      "Nodes": 2,
+      "Axis": 3
+    }
+  },
+  "analysis_log": [
+    "Crash barrier line load magnitude: 7560.00 N/m",
+    "Wind loads (IRC:6-2017): Pz=647.6 N/m\u00b2  FT=20.65 kN  FT/m=0.688 kN/m  FL=20.2461 N/m\u00b2  FV=971.47 N/m\u00b2"
+  ]
+}

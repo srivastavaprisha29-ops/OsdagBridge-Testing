@@ -17,3 +17,5 @@
 - WP5 same-session designs and unlock checks are recorded in the [multi-run register](test_cases/multi_run_tests.csv).
 
 - WP6 report parity and independent load checks are recorded in the [output validation register](test_cases/output_validation.csv).
+
+- WP7 bug investigations and load-key regression evidence are in the [defect register](bug_reports/README.md).
